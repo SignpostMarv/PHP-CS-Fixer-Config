@@ -8,7 +8,7 @@ build:
                 php: 7.0.1
         php702:
             environment:
-                php: 7.0.2
+                php: '7.0.2'
         php703:
             environment:
                 php: 7.0.3
