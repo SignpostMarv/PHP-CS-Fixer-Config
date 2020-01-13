@@ -49,7 +49,9 @@ class Config extends BaseConfig
 		'include' => false,
 		'is_null' => false,
 		'linebreak_after_opening_tag' => true,
-		'list_syntax' => true,
+		'list_syntax' => [
+			'syntax' => 'short',
+		],
 		'logical_operators' => true,
 		'mb_str_functions' => true,
 		'modernize_types_casting' => true,
