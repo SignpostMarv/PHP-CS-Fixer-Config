@@ -98,8 +98,11 @@ class Config extends BaseConfig
 		'phpdoc_no_empty_return' => true,
 		'phpdoc_no_useless_inheritdoc' => true,
 		'phpdoc_order' => true,
+		/*
+		* does not currently appear to handle unions correctly
 		'phpdoc_to_param_type' => true,
 		'phpdoc_to_return_type' => true,
+		*/
 		'pow_to_exponentiation' => true,
 		'protected_to_private' => true,
 		'psr0' => false,
