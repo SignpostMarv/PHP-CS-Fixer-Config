@@ -127,7 +127,7 @@ class Config extends BaseConfig
 		'ternary_to_null_coalescing' => true,
 	];
 
-	public function __construct(array $inDirs)
+	final public function __construct(array $inDirs)
 	{
 		parent::__construct(
 			str_replace(
