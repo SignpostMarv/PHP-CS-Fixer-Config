@@ -64,9 +64,13 @@ class Config extends BaseConfig
 		'native_constant_invocation' => true,
 		'native_function_invocation' => true,
 		'no_alias_functions' => true,
-		'no_multiline_whitespace_before_semicolons' => true,
+		'multiline_whitespace_before_semicolons' => [
+			'strategy' => 'new_line_for_chained_calls',
+		],
 		'no_php4_constructor' => true,
-		'no_short_echo_tag' => true,
+		'echo_tag_syntax' => [
+			'format' => 'long',
+		],
 		'no_unreachable_default_argument_value' => true,
 		'no_unset_cast' => true,
 		'no_useless_else' => true,
@@ -90,7 +94,6 @@ class Config extends BaseConfig
 		'php_unit_mock_short_will_return' => true,
 		'php_unit_namespaced' => true,
 		'php_unit_no_expectation_annotation' => true,
-		'php_unit_ordered_covers' => true,
 		'php_unit_strict' => true,
 		'php_unit_test_case_static_method_calls' => true,
 		'php_unit_test_class_requires_covers' => false,
@@ -98,12 +101,32 @@ class Config extends BaseConfig
 		'phpdoc_align' => false,
 		'phpdoc_indent' => true,
 		'phpdoc_no_alias_tag' => [
+			'replacements' => [
 			'type' => 'var',
 			'link' => 'see',
+			],
 		],
 		'phpdoc_no_empty_return' => true,
 		'phpdoc_no_useless_inheritdoc' => true,
 		'phpdoc_order' => true,
+		'phpdoc_order_by_value' => [
+			'annotations' => [
+				'author',
+				'internal',
+				'method',
+				'property',
+				'property-read',
+				'property-write',
+				'group',
+				'depends',
+				'requires',
+				'dataProvider',
+				'covers',
+				'coversNothing',
+				'throws',
+				'uses',
+			],
+		],
 		/*
 		* does not currently appear to handle unions correctly
 		'phpdoc_to_param_type' => true,
@@ -111,8 +134,7 @@ class Config extends BaseConfig
 		*/
 		'pow_to_exponentiation' => true,
 		'protected_to_private' => true,
-		'psr0' => false,
-		'psr4' => true,
+		'psr_autoloading' => true,
 		'random_api_migration' => true,
 		'return_type_declaration' => [
 			'space_before' => 'one',
