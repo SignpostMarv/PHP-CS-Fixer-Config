@@ -6,7 +6,7 @@
 	errorBaseline="./psalm.baseline.xml"
 >
 	<projectFiles>
-		<file name=".php_cs.dist" />
+		<file name=".php-cs-fixer.dist.php" />
 		<directory name="src" />
 	</projectFiles>
 

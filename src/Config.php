@@ -19,7 +19,7 @@ use function str_replace;
 
 class Config extends BaseConfig
 {
-	const DEFAULT_RULES = [
+	public const DEFAULT_RULES = [
 		'@Symfony' => true,
 		'align_multiline_comment' => false,
 		'array_syntax' => [
