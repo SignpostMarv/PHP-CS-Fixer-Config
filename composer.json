@@ -17,9 +17,6 @@
 		"optimize-autoloader": true,
 		"sort-packages": true
 	},
-	"conflict": {
-		"vimeo/psalm": "<3.15"
-	},
 	"scripts": {
 		"tests": [
 			"psalm --show-info=false --shepherd",
