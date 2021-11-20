@@ -31,7 +31,6 @@ class Config extends BaseConfig
 			'single_item_single_line' => true,
 			'single_line' => false,
 		],
-		'class_keyword_remove' => false,
 		'combine_consecutive_issets' => true,
 		'combine_consecutive_unsets' => true,
 		'combine_nested_dirname' => true,
