@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <psalm
+	errorLevel="1"
 	useDocblockTypes="true"
-	totallyTyped="true"
 	findUnusedCode="true"
 	errorBaseline="./psalm.baseline.xml"
 >
