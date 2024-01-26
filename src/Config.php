@@ -35,7 +35,7 @@ class Config extends BaseConfig
 		'combine_consecutive_issets' => true,
 		'combine_consecutive_unsets' => true,
 		'combine_nested_dirname' => true,
-		'compact_nullable_typehint' => false,
+		'compact_nullable_type_declaration' => false,
 		'concat_space' => [
 			'spacing' => 'one',
 		],
