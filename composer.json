@@ -38,6 +38,6 @@
 		"povils/phpmnd": "^3.4",
 		"roave/security-advisories": "dev-latest",
 		"sebastian/phpcpd": "^6.0",
-		"vimeo/psalm": "^4.23"
+		"vimeo/psalm": "^5.20"
 	}
 }

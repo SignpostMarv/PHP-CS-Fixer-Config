@@ -12,6 +12,7 @@ use function array_filter;
 use function array_reduce;
 use function is_dir;
 use function is_file;
+use LogicException;
 use PhpCsFixer\Config as BaseConfig;
 use PhpCsFixer\Finder as DefaultFinder;
 use function preg_replace;
@@ -149,6 +150,9 @@ class Config extends BaseConfig
 		'ternary_to_null_coalescing' => true,
 	];
 
+	/**
+	 * @throws LogicException if DefaultFinder::getIterator() has issues
+	 */
 	final public function __construct(array $inDirs)
 	{
 		parent::__construct(
@@ -180,7 +184,7 @@ class Config extends BaseConfig
 					DefaultFinder $finder,
 					string $directory
 				) : DefaultFinder {
-					if (true === is_file($directory)) {
+					if (is_file($directory)) {
 						return $finder->append([$directory]);
 					}
 
@@ -195,6 +199,9 @@ class Config extends BaseConfig
 		$this->setFinder($faffing);
 	}
 
+	/**
+	 * @throws LogicException if self::__construct() has issues
+	 */
 	public static function createWithPaths(string ...$paths) : self
 	{
 		return new static(array_filter($paths, static function (string $path) : bool {

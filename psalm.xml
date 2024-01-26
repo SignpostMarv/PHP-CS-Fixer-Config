@@ -1,8 +1,19 @@
 <?xml version="1.0"?>
 <psalm
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://getpsalm.org/schema/config"
+	xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 	errorLevel="1"
-	useDocblockTypes="true"
+	strictBinaryOperands="true"
+	disableSuppressAll="true"
+	checkForThrowsDocblock="true"
+	findUnusedVariablesAndParams="true"
+	findUnusedBaselineEntry="true"
 	findUnusedCode="true"
+	findUnusedPsalmSuppress="true"
+	findUnusedIssueHandlerSuppression="true"
+	ensureArrayIntOffsetsExist="true"
+	ensureArrayStringOffsetsExist="true"
 	errorBaseline="./psalm.baseline.xml"
 	cacheDirectory="./psalm/cache/"
 >
