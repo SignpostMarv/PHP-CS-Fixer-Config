@@ -26,6 +26,7 @@ class Config extends BaseConfig
 			'syntax' => 'short',
 		],
 		'backtick_to_shell_exec' => true,
+		'blank_line_between_import_groups' => false,
 		'class_definition' => [
 			'multi_line_extends_each_single_line' => true,
 			'single_item_single_line' => true,
@@ -175,7 +176,6 @@ class Config extends BaseConfig
 		foreach (
 			array_reduce(
 				$inDirs,
-				(
 					static function (
 						DefaultFinder $finder,
 						string $directory
@@ -185,8 +185,7 @@ class Config extends BaseConfig
 						}
 
 						return $finder->in($directory);
-					}
-				),
+				},
 				$finder
 			)->getIterator() as $finder_faff
 		) {

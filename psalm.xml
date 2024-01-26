@@ -4,6 +4,7 @@
 	useDocblockTypes="true"
 	findUnusedCode="true"
 	errorBaseline="./psalm.baseline.xml"
+	cacheDirectory="./psalm/cache/"
 >
 	<projectFiles>
 		<file name=".php-cs-fixer.dist.php" />
